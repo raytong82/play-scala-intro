@@ -7,8 +7,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.11.6"
 
 resolvers += "Scalaz Bintray Repo" at "https://dl.bintray.com/scalaz/releases"
-resolvers += "Typesafe Ivy releases" at "https://repo.typesafe.com/typesafe/ivy-releases"
-
+resolvers += Resolver.url("Typesafe Ivy releases", url("https://repo.typesafe.com/typesafe/ivy-releases"))(Resolver.ivyStylePatterns)
 
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick" % "1.1.0",
